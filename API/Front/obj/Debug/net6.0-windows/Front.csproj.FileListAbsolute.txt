@@ -1,0 +1,17 @@
+E:\Lucas\TUP\prog2\tp2\API\Front\bin\Debug\net6.0-windows\Front.exe
+E:\Lucas\TUP\prog2\tp2\API\Front\bin\Debug\net6.0-windows\Front.deps.json
+E:\Lucas\TUP\prog2\tp2\API\Front\bin\Debug\net6.0-windows\Front.runtimeconfig.json
+E:\Lucas\TUP\prog2\tp2\API\Front\bin\Debug\net6.0-windows\Front.dll
+E:\Lucas\TUP\prog2\tp2\API\Front\bin\Debug\net6.0-windows\Front.pdb
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.ConsultaProductos.resources
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.Principal.resources
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.csproj.GenerateResource.cache
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.GeneratedMSBuildEditorConfig.editorconfig
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.AssemblyInfoInputs.cache
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.AssemblyInfo.cs
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.csproj.CoreCompileInputs.cache
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.dll
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\refint\Front.dll
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.pdb
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.genruntimeconfig.cache
+E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\ref\Front.dll

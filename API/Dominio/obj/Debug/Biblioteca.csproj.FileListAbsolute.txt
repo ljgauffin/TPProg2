@@ -1,0 +1,2 @@
+E:\Lucas\TUP\prog2\tp2\API\Dominio\obj\Debug\Biblioteca.csproj.AssemblyReference.cache
+E:\Lucas\TUP\prog2\tp2\API\Dominio\obj\Debug\Biblioteca.csproj.CoreCompileInputs.cache

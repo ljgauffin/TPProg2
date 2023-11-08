@@ -16,5 +16,20 @@ namespace Front
         {
             InitializeComponent();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
