@@ -1,5 +1,4 @@
-﻿using Dominio;
-using Domino;
+﻿using Fabrica.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace Servicios
 {
     internal interface IProductosServicios
     {
-        List<Producto> ObtenerProductos();
+        List<Producto> ObtenerProductos(string nombre);
         //bool CrearOrden(OrdenProduccion equipo);
     }
 }

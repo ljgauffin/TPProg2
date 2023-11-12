@@ -4,6 +4,21 @@
     "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Front\\Front.csproj": {}
   },
   "projects": {
+    "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj",
+        "projectName": "Biblioteca",
+        "projectPath": "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Front\\Front.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +46,11 @@
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj": {
+                "projectPath": "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -43,6 +62,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

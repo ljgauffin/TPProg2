@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
+using static System.Net.Mime.MediaTypeNames;
+using Fabrica.datos;
 
-namespace Datos
+namespace Fabrica.Datos
 {
     public class DBHelper
     {
@@ -12,7 +14,9 @@ namespace Datos
         
         private DBHelper()
         {
-            conexion = new SqlConnection(@"Data Source=localhost\\SQLEXPRESS; Initial Catalog=Fabrica;user id =sa; password=test;TrustServerCertificate=True");
+            
+                conexion = new SqlConnection(@"Data Source = localhost; Initial Catalog = Fabrica; User ID = sa; Password = test");
+            //conexion = new SqlConnection(@"Data Source=localhost\\SQLEXPRESS; Initial Catalog=Fabrica;user id =sa; password=test;TrustServerCertificate=True");
         }
         
         public static DBHelper GetInstancia()
@@ -40,5 +44,26 @@ namespace Datos
             conexion.Close();
             return tabla;   
         }
+
+        public DataTable Consultar(string nombreSP, List<Parametro> values)
+        {
+            DataTable tabla = new DataTable();
+
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand(nombreSP, conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (values != null)
+            {
+                foreach (Parametro oParametro in values)
+                {
+                    cmd.Parameters.AddWithValue(oParametro.Clave, oParametro.Valor);
+                }
+            }
+            tabla.Load(cmd.ExecuteReader());
+            conexion.Close();
+
+            return tabla;
+        }
     }
+    
 }

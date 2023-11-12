@@ -19,7 +19,7 @@ namespace Front
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            IsMdiContainer = true;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -29,7 +29,13 @@ namespace Front
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmConsultaProductos form = new FrmConsultaProductos();
+            
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            //new FrmConsultaProductos().ShowDialog();
         }
     }
 }

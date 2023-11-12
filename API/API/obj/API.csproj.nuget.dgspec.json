@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj": {
+                "projectPath": "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -47,6 +51,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
@@ -70,6 +78,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj",
+        "projectName": "Biblioteca",
+        "projectPath": "E:\\Lucas\\TUP\\prog2\\tp2\\API\\Dominio\\Biblioteca.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

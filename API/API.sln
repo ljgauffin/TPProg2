@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{E004B09D-875D-41CD-BBE8-1DAB514E3BD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biblio", "Dominio\biblio.csproj", "{89FB67CD-B5A9-4203-920F-908042862526}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca", "Dominio\Biblioteca.csproj", "{89FB67CD-B5A9-4203-920F-908042862526}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front", "Front\Front.csproj", "{F1242BD0-A280-42F1-878C-BCADF776C591}"
 EndProject

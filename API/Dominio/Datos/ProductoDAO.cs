@@ -1,4 +1,5 @@
-﻿using Dominio;
+﻿using Fabrica.datos;
+using Fabrica.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,11 +9,61 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Datos
+namespace Fabrica.Datos
 {
-    public class ProductoDAO : IProductoDato
+    public class ProductoDAO : IProductoDao
     {
-        
+        public bool CrearProducto(Producto producto)
+        {
+            try
+            {
+                List<Parametro> parametros = new List<Parametro>();
+                string sp = "CREAR_PRODUCTO";
+                parametros.Add(new Parametro("@nombre", producto.Nombre));
+                parametros.Add(new Parametro("@descripcion", producto.Descripcion));
+                parametros.Add(new Parametro("@costo", producto.Costo));
+                parametros.Add(new Parametro("@precio", producto.Precio));
+
+
+                DBHelper.GetInstancia().Consultar(sp, parametros);
+                return true;
+
+            }
+            catch(Exception ex)
+            {
+                return false;
+
+            }
+            
+        }
+
+        public bool ModificarProducto(Producto producto)
+        {
+            try
+            {
+                List<Parametro> parametros = new List<Parametro>();
+                string sp = "MODIFICAR_PRODUCTO";
+                parametros.Add(new Parametro("@id", producto.id));
+                parametros.Add(new Parametro("@nombre", producto.Nombre));
+                parametros.Add(new Parametro("@descripcion", producto.Descripcion));
+                parametros.Add(new Parametro("@costo", producto.Costo));
+                parametros.Add(new Parametro("@precio", producto.Precio));
+
+
+                DBHelper.GetInstancia().Consultar(sp, parametros);
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+
+            }
+        }
+
+
+
+
 
         //public bool CrearOrden(OrdenProduccion equipo)
         //{
@@ -69,9 +120,27 @@ namespace Datos
         //    return aux;
         //}
 
-        public List<Producto> ObtenerProductos()
+        public List<Producto> ObtenerProductos(string nombre, int? id)
         {
-            DataTable tabla = DBHelper.GetInstancia().Consultar("CONSULTAR_PRODUCTOS");
+            List <Parametro> parametros = new List<Parametro>();
+            string sp = "";
+            if (id==null)
+            {
+                sp = "CONSULTAR_PRODUCTOS";
+                parametros.Add(new Parametro("@nombre", nombre));
+
+            }
+            else
+            {
+                sp = "CONSULTAR_PRODUCTO";
+                parametros.Add(new Parametro("@id", id));
+
+            }
+
+            
+            
+
+            DataTable tabla = DBHelper.GetInstancia().Consultar(sp, parametros);
             List<Producto> lista = new List<Producto>();
 
             foreach (DataRow row in tabla.Rows)
@@ -81,7 +150,7 @@ namespace Datos
                 {
                     id = Convert.ToInt32(row["id"]),
                     Nombre = row["Nombre"].ToString(),
-                    Descripcion = row["Nombre"].ToString(),
+                    Descripcion = row["Descripcion"].ToString(),
                     Imagen = row["Imagen"].ToString(),
                     Precio = (float)Convert.ToDecimal(row["Precio"].ToString()),
                     Costo = (float)Convert.ToDecimal(row["Costo"].ToString())

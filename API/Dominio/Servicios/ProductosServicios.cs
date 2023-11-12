@@ -1,6 +1,5 @@
-﻿using Datos;
-using Dominio;
-using Domino;
+﻿using Fabrica.Datos;
+using Fabrica.Dominio;
 using Servicios;
 using System;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parcial2023.Servicios
+namespace Fabrica.Servicios
 {
     internal class ProductosServicios : IProductosServicios
     {
@@ -24,9 +23,9 @@ namespace Parcial2023.Servicios
         //    return productoDAO.CrearOrden(equipo);
         //}
 
-        public List<Producto> ObtenerProductos()
+        public List<Producto> ObtenerProductos(string nombre)
         {
-            return productoDAO.ObtenerProductos();
+            return productoDAO.ObtenerProductos(nombre, null);
         }
     }
 }

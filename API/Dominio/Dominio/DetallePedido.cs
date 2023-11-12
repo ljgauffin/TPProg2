@@ -1,4 +1,4 @@
-﻿namespace Dominio
+﻿namespace Fabrica.Dominio
 {
     public class DetallePedido
     {
