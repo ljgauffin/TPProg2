@@ -30,7 +30,18 @@ namespace Front
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultaProductos form = new FrmConsultaProductos();
-            
+
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            //new FrmConsultaProductos().ShowDialog();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProductos form = new FrmConsultaProductos();
+
             form.MdiParent = this;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
@@ -39,3 +50,4 @@ namespace Front
         }
     }
 }
+

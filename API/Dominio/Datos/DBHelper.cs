@@ -14,8 +14,12 @@ namespace Fabrica.Datos
         
         private DBHelper()
         {
+            //conexion de pedrito
+            conexion = new SqlConnection(@"Data Source=DESKTOP-9MCMVDM\SQLEXPRESS;Initial Catalog=Fabrica;Integrated Security=True");
             
-                conexion = new SqlConnection(@"Data Source = localhost; Initial Catalog = Fabrica; User ID = sa; Password = test");
+            //CONEXION DE TUCA
+            //conexion = new SqlConnection(@"Data Source = localhost; Initial Catalog = Fabrica; User ID = sa; Password = test");
+
             //conexion = new SqlConnection(@"Data Source=localhost\\SQLEXPRESS; Initial Catalog=Fabrica;user id =sa; password=test;TrustServerCertificate=True");
         }
         

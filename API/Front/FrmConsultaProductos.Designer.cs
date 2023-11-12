@@ -34,12 +34,12 @@
             btnConsultar = new Button();
             txtProducto = new TextBox();
             dgvProductos = new DataGridView();
+            btnNuevo = new Button();
             id = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             precio = new DataGridViewTextBoxColumn();
             Costo = new DataGridViewTextBoxColumn();
             Acciones = new DataGridViewButtonColumn();
-            btnNuevo = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
@@ -47,9 +47,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(30, 37);
+            label1.Location = new Point(26, 28);
             label1.Name = "label1";
-            label1.Size = new Size(64, 20);
+            label1.Size = new Size(51, 15);
             label1.TabIndex = 0;
             label1.Text = "Nombre";
             // 
@@ -59,9 +59,11 @@
             groupBox1.Controls.Add(btnConsultar);
             groupBox1.Controls.Add(txtProducto);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(12, 22);
+            groupBox1.Location = new Point(10, 16);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 102);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(679, 76);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
@@ -69,9 +71,10 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(654, 34);
+            btnLimpiar.Location = new Point(572, 26);
+            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
+            btnLimpiar.Size = new Size(82, 22);
             btnLimpiar.TabIndex = 3;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // 
             // btnConsultar
             // 
-            btnConsultar.Location = new Point(517, 32);
+            btnConsultar.Location = new Point(452, 24);
+            btnConsultar.Margin = new Padding(3, 2, 3, 2);
             btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(94, 29);
+            btnConsultar.Size = new Size(82, 22);
             btnConsultar.TabIndex = 2;
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = true;
@@ -89,9 +93,10 @@
             // 
             // txtProducto
             // 
-            txtProducto.Location = new Point(100, 34);
+            txtProducto.Location = new Point(88, 26);
+            txtProducto.Margin = new Padding(3, 2, 3, 2);
             txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(241, 27);
+            txtProducto.Size = new Size(211, 23);
             txtProducto.TabIndex = 1;
             // 
             // dgvProductos
@@ -99,13 +104,25 @@
             dgvProductos.AllowUserToAddRows = false;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProductos.Columns.AddRange(new DataGridViewColumn[] { id, Nombre, precio, Costo, Acciones });
-            dgvProductos.Location = new Point(12, 145);
+            dgvProductos.Location = new Point(10, 109);
+            dgvProductos.Margin = new Padding(3, 2, 3, 2);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersWidth = 51;
             dgvProductos.RowTemplate.Height = 29;
-            dgvProductos.Size = new Size(1019, 275);
+            dgvProductos.Size = new Size(892, 206);
             dgvProductos.TabIndex = 4;
             dgvProductos.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // btnNuevo
+            // 
+            btnNuevo.Location = new Point(404, 360);
+            btnNuevo.Margin = new Padding(3, 2, 3, 2);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(82, 22);
+            btnNuevo.TabIndex = 5;
+            btnNuevo.Text = "Nuevo";
+            btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // id
             // 
@@ -142,28 +159,19 @@
             Acciones.Name = "Acciones";
             Acciones.Resizable = DataGridViewTriState.True;
             Acciones.SortMode = DataGridViewColumnSortMode.Automatic;
-            Acciones.Text = "Ver/Editar";
+            Acciones.Text = "VerEditar";
             Acciones.ToolTipText = "Ver/Editar";
             Acciones.Width = 125;
             // 
-            // btnNuevo
-            // 
-            btnNuevo.Location = new Point(462, 480);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(94, 29);
-            btnNuevo.TabIndex = 5;
-            btnNuevo.Text = "Nuevo";
-            btnNuevo.UseVisualStyleBackColor = true;
-            btnNuevo.Click += btnNuevo_Click;
-            // 
             // FrmConsultaProductos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 583);
+            ClientSize = new Size(913, 437);
             Controls.Add(btnNuevo);
             Controls.Add(dgvProductos);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmConsultaProductos";
             Text = "ConsultaProductos";
             Load += ConsultaProductos_Load;
@@ -181,11 +189,11 @@
         private Button btnConsultar;
         private TextBox txtProducto;
         private DataGridView dgvProductos;
+        private Button btnNuevo;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn precio;
         private DataGridViewTextBoxColumn Costo;
         private DataGridViewButtonColumn Acciones;
-        private Button btnNuevo;
     }
 }

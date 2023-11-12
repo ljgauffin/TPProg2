@@ -35,7 +35,7 @@ namespace Front
             {
                 int nro = int.Parse(dgvProductos.CurrentRow.Cells["id"].Value.ToString());
                 new frmProducto(nro, true).ShowDialog();
-                
+
             }
         }
 

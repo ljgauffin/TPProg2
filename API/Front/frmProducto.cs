@@ -87,6 +87,17 @@ namespace Front
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            
+            if (string.IsNullOrEmpty(txtNombre.Text)||string.IsNullOrEmpty(txtDescripcion.Text))//controla que se ingrese nombre y descripcion
+            {
+                MessageBox.Show("Complete el nombre y descripcion","advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+
+            
+
             Producto prod = new Producto()
             {
                 Nombre = txtNombre.Text.ToString(),
@@ -103,6 +114,7 @@ namespace Front
             else
             {
                 crearProducto(prod);
+            }
             }
         }
 

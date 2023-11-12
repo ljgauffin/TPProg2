@@ -22,3 +22,27 @@ E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.csproj.AssemblyR
 E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.FrmConsultaProductos.resources
 E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.csproj.CopyComplete
 E:\Lucas\TUP\prog2\tp2\API\Front\obj\Debug\net6.0-windows\Front.frmProducto.resources
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.exe
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.deps.json
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.runtimeconfig.json
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.dll
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.pdb
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.dll
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.pdb
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.dll.config
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.AssemblyReference.cache
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.FrmConsultaProductos.resources
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmProducto.resources
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.Principal.resources
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.GenerateResource.cache
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.AssemblyInfoInputs.cache
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.AssemblyInfo.cs
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.CopyComplete
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.dll
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\refint\Front.dll
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.pdb
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.genruntimeconfig.cache
+C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\ref\Front.dll
