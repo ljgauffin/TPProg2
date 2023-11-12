@@ -7,6 +7,7 @@ using Fabrica.datos;
 
 namespace Fabrica.Datos
 {
+    //hola
     public class DBHelper
     {
         private static DBHelper instancia = null;
