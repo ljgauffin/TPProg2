@@ -46,3 +46,28 @@ C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo pra
 C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.pdb
 C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.genruntimeconfig.cache
 C:\Users\pedro\OneDrive\Desktop\asd\Facultad\Materias\Programacion 2\Trabajo practico\TPProg2\API\Front\obj\Debug\net6.0-windows\ref\Front.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.exe
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.deps.json
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.runtimeconfig.json
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Front.pdb
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.pdb
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.dll.config
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.AssemblyReference.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.FrmConsultaProductos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmPresupuestos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmProducto.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.Principal.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.GenerateResource.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.AssemblyInfoInputs.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.AssemblyInfo.cs
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.CoreCompileInputs.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.CopyComplete
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\refint\Front.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.pdb
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.genruntimeconfig.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\ref\Front.dll

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "A0HagmScsyqLCYzW64JbNcbdiWoVF/iCjS6JVkkpKgLFXm957Ck1xdPf+jnQzlgGJ+NR9Nqg3l7qtcHzOw/Kbg==",
+  "dgSpecHash": "5yOUVrK04n0uyGn48c0VBU12WfBEzyO/9Su0GSGC1D7aQt+LKTWAJYH/xNZ6nNxCdflSEncCmX9VdN4Vkzhnaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\OneDrive\\Desktop\\asd\\Facultad\\Materias\\Programacion 2\\Trabajo practico\\TPProg2\\API\\Front\\Front.csproj",
+  "projectFilePath": "C:\\Users\\Luca's pc\\Desktop\\tp\\TPProg2\\API\\Front\\Front.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pedro\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Luca's pc\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
