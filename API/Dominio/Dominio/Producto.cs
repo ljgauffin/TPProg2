@@ -14,6 +14,10 @@ namespace Fabrica.Dominio
         public string Imagen { get; set; }
         public float Precio { get; set; }
         public float Costo { get; set; }
+        public override string ToString()
+        {
+            return Nombre;
+        }
 
     }
 }

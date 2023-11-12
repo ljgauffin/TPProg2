@@ -11,6 +11,7 @@ namespace Fabrica.Datos
     public interface IProductoDao
     {
         bool CrearProducto(Producto producto);
+        bool ElimitarProducto(int producto);
         bool ModificarProducto(Producto producto);
         List<Producto> ObtenerProductos(string nombre, int? id);
         //bool Obtener(Producto equipo);

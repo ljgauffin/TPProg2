@@ -43,6 +43,20 @@ namespace Fabrica.Http
            
             return resp;
         }
+        public async Task<Response> DeleteAsync(string url)
+        {
+           
+            var result = await client.DeleteAsync(url);
+
+
+            Response resp = new Response()
+            {
+                Ok = result.IsSuccessStatusCode,
+                Mensaje = await result.Content.ReadAsStringAsync()
+            };
+
+            return resp;
+        }
 
         public async Task<Response> PutAsync(string url, string data)
         {

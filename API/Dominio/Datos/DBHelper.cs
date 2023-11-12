@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Data;
 using static System.Net.Mime.MediaTypeNames;
 using Fabrica.datos;
+using System.Drawing;
 
 namespace Fabrica.Datos
 {
@@ -39,7 +40,11 @@ namespace Fabrica.Datos
 
         public DataTable Consultar(string nombreSP)
         {
-            conexion.Open();
+            if (conexion.State != ConnectionState.Open)
+            {
+                conexion.Open();
+            }
+            
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexion;
             comando.CommandType = CommandType.StoredProcedure;
@@ -54,7 +59,10 @@ namespace Fabrica.Datos
         {
             DataTable tabla = new DataTable();
 
-            conexion.Open();
+            if (conexion.State != ConnectionState.Open)
+            {
+                conexion.Open();
+            }
             SqlCommand cmd = new SqlCommand(nombreSP, conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             if (values != null)

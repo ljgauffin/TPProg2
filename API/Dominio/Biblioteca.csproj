@@ -179,9 +179,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\DBHelper.cs" />
-    <Compile Include="Datos\IProductoDato.cs" />
+    <Compile Include="Datos\Estado\IEstadoDao.cs" />
+    <Compile Include="Datos\Estado\EstadoDAO.cs" />
+    <Compile Include="Datos\Pedido\IPedidoDao.cs" />
+    <Compile Include="Datos\Pedido\PedidoDAO.cs" />
+    <Compile Include="Datos\Producto\IProductoDato.cs" />
     <Compile Include="Datos\Parametro.cs" />
-    <Compile Include="Datos\ProductoDAO.cs" />
+    <Compile Include="Datos\Producto\ProductoDAO.cs" />
     <Compile Include="Dominio\DetallePedido.cs" />
     <Compile Include="Dominio\Estado.cs" />
     <Compile Include="Dominio\Pedido.cs" />

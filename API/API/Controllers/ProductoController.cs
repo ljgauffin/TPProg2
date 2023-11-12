@@ -16,7 +16,7 @@ namespace Api.Controllers
         private IProductoDao _productoDao;
         public ProductoController()
         {
-            _productoDao = new ProductoDAO();
+            _productoDao = new ProductoDao();
         }
 
         // GET: ComponenteController
@@ -45,6 +45,35 @@ namespace Api.Controllers
                     return BadRequest("Datos de producto incorrectos!");
                 }
                 if (_productoDao.CrearProducto(producto))
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return StatusCode(500, "Error interno! Intente luego");
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno! Intente luego");
+            }
+        }
+
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteProducto(int id) {
+            Console.WriteLine($"Se esta ejecutando delete {id}");
+            try
+            {
+                if (id == null)
+                {
+                    return BadRequest("Datos de producto incorrectos!");
+                }
+                if (_productoDao.ElimitarProducto(id))
                 {
                     return Ok();
                 }

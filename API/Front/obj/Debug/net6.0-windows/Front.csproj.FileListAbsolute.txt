@@ -57,7 +57,6 @@ C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\bin\Debug\net6.0-windows\Dominio.dll.config
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.AssemblyReference.cache
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.FrmConsultaProductos.resources
-C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmPresupuestos.resources
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmProducto.resources
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.Principal.resources
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.csproj.GenerateResource.cache
@@ -71,3 +70,6 @@ C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\refint\
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.pdb
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.genruntimeconfig.cache
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\ref\Front.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmPedidos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmConsultaPedido.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net6.0-windows\Front.frmAltaPedido.resources

@@ -37,6 +37,7 @@
             nmcCosto = new NumericUpDown();
             nmcPrecio = new NumericUpDown();
             groupBox1 = new GroupBox();
+            btnEliminar = new Button();
             btnCancelar = new Button();
             btnGuardar = new Button();
             txtDescripcion = new TextBox();
@@ -119,6 +120,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnEliminar);
             groupBox1.Controls.Add(btnCancelar);
             groupBox1.Controls.Add(btnGuardar);
             groupBox1.Controls.Add(txtDescripcion);
@@ -128,10 +130,21 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Descripcion";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(456, 271);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(447, 271);
+            btnCancelar.Location = new Point(307, 271);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
             btnCancelar.TabIndex = 2;
@@ -196,5 +209,6 @@
         private TextBox txtDescripcion;
         private Button btnCancelar;
         private Button btnGuardar;
+        private Button btnEliminar;
     }
 }

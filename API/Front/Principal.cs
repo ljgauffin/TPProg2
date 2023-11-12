@@ -48,6 +48,17 @@ namespace Front
             form.Show();
             //new FrmConsultaProductos().ShowDialog();
         }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmPedidos form = new frmPedidos();
+
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
     }
 }
 

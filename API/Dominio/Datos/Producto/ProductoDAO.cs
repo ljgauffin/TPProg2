@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Fabrica.Datos
 {
-    public class ProductoDAO : IProductoDao
+    public class ProductoDao : IProductoDao
     {
         public bool CrearProducto(Producto producto)
         {
@@ -61,7 +61,27 @@ namespace Fabrica.Datos
             }
         }
 
+        public bool ElimitarProducto(int id)
+        {
 
+            try
+            {
+                List<Parametro> parametros = new List<Parametro>();
+                string sp = "SP_ELIMINAR_PRODUCTO";
+                parametros.Add(new Parametro("@id", id));
+
+
+                DBHelper.GetInstancia().Consultar(sp, parametros);
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+
+            }
+
+        }
 
 
 

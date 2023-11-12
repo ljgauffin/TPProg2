@@ -11,11 +11,11 @@ namespace Fabrica.Servicios
 {
     internal class ProductosServicios : IProductosServicios
     {
-        private ProductoDAO productoDAO;
+        private ProductoDao productoDAO;
 
         public ProductosServicios()
         {
-            this.productoDAO = new ProductoDAO();
+            this.productoDAO = new ProductoDao();
         }
 
         //public bool CrearOrden(OrdenProduccion equipo)

@@ -23,6 +23,8 @@ namespace Front
             this.prodId = prod;
             InitializeComponent();
             this.editing = editing;
+            btnEliminar.Visible = editing;
+
         }
 
         private void frmProductocs_Load(object sender, EventArgs e)
@@ -87,34 +89,34 @@ namespace Front
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
-            if (string.IsNullOrEmpty(txtNombre.Text)||string.IsNullOrEmpty(txtDescripcion.Text))//controla que se ingrese nombre y descripcion
+
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text))//controla que se ingrese nombre y descripcion
             {
-                MessageBox.Show("Complete el nombre y descripcion","advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Complete el nombre y descripcion", "advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else
             {
 
-            
 
-            Producto prod = new Producto()
-            {
-                Nombre = txtNombre.Text.ToString(),
-                Descripcion = txtDescripcion.Text.ToString(),
-                Costo = (float)nmcCosto.Value,
-                Precio = (float)nmcPrecio.Value
-            };
 
-            if (editing)
-            {
-                prod.id = prodId;
-                modficiarProducto(prod);
-            }
-            else
-            {
-                crearProducto(prod);
-            }
+                Producto prod = new Producto()
+                {
+                    Nombre = txtNombre.Text.ToString(),
+                    Descripcion = txtDescripcion.Text.ToString(),
+                    Costo = (float)nmcCosto.Value,
+                    Precio = (float)nmcPrecio.Value
+                };
+
+                if (editing)
+                {
+                    prod.id = prodId;
+                    modficiarProducto(prod);
+                }
+                else
+                {
+                    crearProducto(prod);
+                }
             }
         }
 
@@ -127,7 +129,7 @@ namespace Front
 
             string data = JsonConvert.SerializeObject(prod).ToString();
             Response result = await ConsultaHelper.GetInstance().PostAsync(url, data);
-            
+
             if (result.Ok)
             {
                 MessageBox.Show("Producto creado con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -147,11 +149,39 @@ namespace Front
             //prod.Imagen = "no seas culiao";
 
             string data = JsonConvert.SerializeObject(prod).ToString();
-            Response result = await ConsultaHelper.GetInstance().PostAsync(url, data);
+            Response result = await ConsultaHelper.GetInstance().PutAsync(url, data);
 
             if (result.Ok)
             {
                 MessageBox.Show("Producto creado con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarProducto(prodId);
+        }
+
+        private async void EliminarProducto(int prodId)
+        {
+            //TODO: modal de confirmacion
+            string url = string.Format("https://localhost:7133/Producto/{0}", prodId);
+            
+            Response result = await ConsultaHelper.GetInstance().DeleteAsync(url);
+
+            if (result.Ok)
+            {
+                MessageBox.Show("Producto eliminado con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
