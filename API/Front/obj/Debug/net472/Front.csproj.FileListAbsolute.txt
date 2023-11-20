@@ -1,0 +1,12 @@
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.csproj.AssemblyReference.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.frmAltaPedido.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.frmConsultaPedido.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.FrmConsultaProductos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.frmPedidos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.frmProducto.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.Principal.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.csproj.GenerateResource.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.AssemblyInfoInputs.cache
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.AssemblyInfo.cs
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front\obj\Debug\net472\Front.csproj.CoreCompileInputs.cache

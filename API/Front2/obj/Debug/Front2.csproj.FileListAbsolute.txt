@@ -73,3 +73,10 @@ C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\bin\Debug\Dominio.dll
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\bin\Debug\Dominio.pdb
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\bin\Debug\Dominio.dll.config
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.frmPrincipalPrueba.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Productos.FrmConsultaProductos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Productos.frmProducto.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Pedidos.FrmConsultaPedidos.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Pedidos.FrmPedido.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Pedidos.FrmAltaPedido.resources

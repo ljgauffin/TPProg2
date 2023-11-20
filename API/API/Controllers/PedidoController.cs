@@ -21,9 +21,9 @@ namespace Api.Controllers
 
         // GET: ComponenteController
         [HttpGet]
-        public IEnumerable<Pedido> GetProductos(DateTime desde, DateTime hasta, int estadoId, int? id = null)
+        public IEnumerable<Pedido> GetPedidos(DateTime desde, DateTime hasta, int estadoId, int? id = null)
         {
-
+            Console.WriteLine($"Consultando pedidos desde :{desde} - Hasta: {hasta} - estadoId: {estadoId} - id: {id}");
             return _pedidoDao.ObtenerPedidos(desde, hasta, estadoId, id);
         }
 

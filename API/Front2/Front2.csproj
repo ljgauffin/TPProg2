@@ -68,15 +68,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsultaHelper.cs" />
-    <Compile Include="FrmConsultaProductos.cs" />
-    <Compile Include="FrmConsultaProductos.Designer.cs">
-      <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPrincipalPrueba.cs">
+    <Compile Include="FrmPrincipalPrueba.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipalPrueba.Designer.cs">
-      <DependentUpon>frmPrincipalPrueba.cs</DependentUpon>
+    <Compile Include="FrmPrincipalPrueba.Designer.cs">
+      <DependentUpon>FrmPrincipalPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\FrmAltaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos\FrmAltaPedido.Designer.cs">
+      <DependentUpon>FrmAltaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\FrmConsultaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos\FrmConsultaPedidos.Designer.cs">
+      <DependentUpon>FrmConsultaPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\FrmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos\FrmPedido.Designer.cs">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FrmConsultaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FrmConsultaProductos.Designer.cs">
+      <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,11 +126,23 @@
       <DependentUpon>frmReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="FrmConsultaProductos.resx">
+    <EmbeddedResource Include="FrmPrincipalPrueba.resx">
+      <DependentUpon>FrmPrincipalPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos\FrmAltaPedido.resx">
+      <DependentUpon>FrmAltaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos\FrmConsultaPedidos.resx">
+      <DependentUpon>FrmConsultaPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos\FrmPedido.resx">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FrmConsultaProductos.resx">
       <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalPrueba.resx">
-      <DependentUpon>frmPrincipalPrueba.cs</DependentUpon>
+    <EmbeddedResource Include="Productos\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

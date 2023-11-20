@@ -1,6 +1,6 @@
 ﻿namespace Front2
 {
-    partial class frmPrincipalPrueba
+    partial class FrmPrincipalPrueba
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1298, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1468, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,12 +70,14 @@
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click_1);
             // 
             // pedidosToolStripMenuItem
             // 
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
             this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.pedidosToolStripMenuItem.Text = "Pedidos";
+            this.pedidosToolStripMenuItem.Click += new System.EventHandler(this.pedidosToolStripMenuItem_Click_1);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -83,14 +85,14 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
-            // frmPrincipalPrueba
+            // FrmPrincipalPrueba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 557);
+            this.ClientSize = new System.Drawing.Size(1468, 682);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmPrincipalPrueba";
+            this.Name = "FrmPrincipalPrueba";
             this.Text = "frmPrincipalPrueba";
             this.Load += new System.EventHandler(this.frmPrincipalPrueba_Load);
             this.menuStrip1.ResumeLayout(false);

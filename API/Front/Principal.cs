@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -64,7 +65,7 @@ namespace Front
 
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Process.Start(@"C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\bin\Debug\Front2.exe");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Front2.Report;
+﻿using Front2.Productos;
+using Front2.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,12 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Front2.Pedidos;
 
 namespace Front2
 {
-    public partial class frmPrincipalPrueba : Form
+    public partial class FrmPrincipalPrueba : Form
     {
-        public frmPrincipalPrueba()
+        public FrmPrincipalPrueba()
         {
             InitializeComponent();
         }
@@ -69,6 +71,28 @@ namespace Front2
             //form.FormBorderStyle = FormBorderStyle.None;
             //form.Dock = DockStyle.Fill;
             //form.Show();
+        }
+
+        private void productosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmConsultaProductos form = new FrmConsultaProductos();
+
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            //new FrmConsultaProductos().ShowDialog();
+        }
+
+        private void pedidosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmConsultaPedidos form = new FrmConsultaPedidos();
+
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            //new FrmConsultaProductos().ShowDialog();
         }
     }
 }

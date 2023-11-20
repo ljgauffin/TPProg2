@@ -17,7 +17,7 @@ namespace Front2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipalPrueba());
+            Application.Run(new FrmPrincipalPrueba());
         }
     }
 }

@@ -102,7 +102,7 @@ namespace Api.Controllers
                 {
                     return BadRequest("Datos de producto incorrectos!");
                 }
-                if (_productoDao.CrearProducto(producto))
+                if (_productoDao.ModificarProducto(producto))
                 {
                     return Ok();
                 }

@@ -1,9 +1,17 @@
-﻿
-using Fabrica.Http;
+﻿using Fabrica.Dominio;
+using Fabrica.Front2.http;
 using Newtonsoft.Json;
-using Fabrica.Dominio;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Front
+namespace Front2.Productos
 {
     public partial class FrmConsultaProductos : Form
     {
@@ -29,15 +37,7 @@ namespace Front
             CargarProductos();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvProductos.CurrentCell.ColumnIndex == 4)
-            {
-                int nro = int.Parse(dgvProductos.CurrentRow.Cells["id"].Value.ToString());
-                new frmProducto(nro, true).ShowDialog();
-
-            }
-        }
+   
 
         private async void CargarProductos()
         {
@@ -67,16 +67,41 @@ namespace Front
             }
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
+        
 
-            CargarProductos();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             new frmProducto(0, false).ShowDialog();
             CargarProductos();
         }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (dgvProductos.CurrentCell.ColumnIndex == 4)
+            {
+                int nro = int.Parse(dgvProductos.CurrentRow.Cells["id"].Value.ToString());
+                new frmProducto(nro, true).ShowDialog();
+
+            }
+        }
+
+        private void FrmConsultaProductos_Load(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void btnConsultar_Click_1(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtProducto.Text = string.Empty;
+            CargarProductos();
+        }
+
+       
     }
 }
