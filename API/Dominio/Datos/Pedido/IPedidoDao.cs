@@ -10,6 +10,7 @@ namespace Fabrica.Datos
 {
     public interface IPedidoDao
     {
+        bool CambiarEstado(Pedido pedido);
         bool CrearPedido(Pedido pedido);
         List<DetallePedido> ObtenerDetalle(int id);
         List<Pedido> ObtenerPedidos(DateTime desde, DateTime hasta, int estadoId, int? id);

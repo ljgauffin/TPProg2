@@ -166,5 +166,28 @@ namespace Fabrica.Datos
 
             return lista;
         }
+
+
+        public bool CambiarEstado(Pedido pedido)
+        {
+            try
+            {
+                List<Parametro> parametros = new List<Parametro>();
+                string sp = "SP_CAMBIAR_ESTADO_PEDIDO";
+                parametros.Add(new Parametro("@pedidoId", pedido.Id));
+                parametros.Add(new Parametro("@estadoId", pedido.Estado.Id));
+                
+
+
+                DBHelper.GetInstancia().Consultar(sp, parametros);
+               
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

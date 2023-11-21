@@ -80,3 +80,4 @@ C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Productos.frmP
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Pedidos.FrmConsultaPedidos.resources
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Pedidos.FrmPedido.resources
 C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.Pedidos.FrmAltaPedido.resources
+C:\Users\Luca's pc\Desktop\tp\TPProg2\API\Front2\obj\Debug\Front2.FrmInicio.resources

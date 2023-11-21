@@ -26,23 +26,23 @@ namespace Front2.Productos
 
         }
 
-        private void frmProducto_Load(object sender, EventArgs e)
+        private async void frmProducto_Load(object sender, EventArgs e)
         {
             if (editing)
             {
-
-                this.Text = $"Editando producto {prodId}";
-                CargarCombos();
+                await CargarCombos();
+                this.Text = $"Modificar producto: {prodId}";
+                
             }
             else
             {
-                this.Text = $"Crear nuevo";
+                this.Text = $"Crear nuevo producto";
             }
 
 
         }
 
-        private async void CargarCombos()
+        private async Task CargarCombos()
         {
 
             string url = string.Format("https://localhost:7133/Producto?id={0}", prodId.ToString());
@@ -91,7 +91,12 @@ namespace Front2.Productos
 
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text))//controla que se ingrese nombre y descripcion
             {
-                MessageBox.Show("Complete el nombre y descripcion", "advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Complete el nombre y descripcion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            if(nmcCosto.Value>=nmcPrecio.Value)
+            {
+                MessageBox.Show("El precio debe ser mayor al costo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else
@@ -152,7 +157,7 @@ namespace Front2.Productos
 
             if (result.Ok)
             {
-                MessageBox.Show("Producto creado con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Producto modificado con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
@@ -189,6 +194,9 @@ namespace Front2.Productos
             }
         }
 
-
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

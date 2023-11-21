@@ -96,7 +96,7 @@ namespace Front2.Pedidos
                     pedido.CorreoCliente,
                     pedido.FechaPedido,
                     pedido.Estado.Id,
-                    pedido.FechaEntrega,
+                    pedido.FechaEntrega.ToString("dd/MM/yyyy"),
                     pedido.Estado.Nombre
                     });
                 }

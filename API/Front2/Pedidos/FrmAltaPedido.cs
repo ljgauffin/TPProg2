@@ -70,6 +70,14 @@ namespace Front2.Pedidos
             };
 
             AgregarDetalle(detalle);
+            ActualizarLabels();
+        }
+
+        private void ActualizarLabels()
+        {
+            
+            lblCosto.Text = String.Format("{0:0.00}", pedido.TotalCosto());
+            lblPrecio.Text = String.Format("{0:0.00}", pedido.TotalPrecio());
         }
 
         private void AgregarDetalle(DetallePedido detalle)
@@ -95,8 +103,9 @@ namespace Front2.Pedidos
                     detalle.Product.Nombre.ToString(),
                     detalle.Product.id,
                     detalle.Cantidad,
-                    detalle.Precio,
-                    detalle.Costo
+                    String.Format("{0:0.00}", detalle.Precio),
+                    String.Format("{0:0.00}", detalle.Costo),
+                    
                     });
             }
         }
@@ -108,6 +117,7 @@ namespace Front2.Pedidos
             {
                 int productoId = int.Parse(dgvDetalle.CurrentRow.Cells["productoId"].Value.ToString());
                 QuitarDetalle(productoId);
+                ActualizarLabels();
 
             }
         }
@@ -120,14 +130,44 @@ namespace Front2.Pedidos
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            //TODO: validar fecha posterior a la actual
-            //TODO: validar al menos un detalle
-            pedido.FechaEntrega = dtpEntrega.Value;
-            pedido.NombreCliente = txtNombre.Text;
-            pedido.CuitCliente = txtCuit.Text;
-            pedido.CorreoCliente = txtCorreo.Text;
 
-            CrearPedido(pedido);
+            if (!ValidarFecha())//controla que se ingrese nombre y descripcion
+            {
+                MessageBox.Show("La fecha de entrega debe ser posterior a la actual", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else if (!ValidarInputs())
+            {
+                MessageBox.Show("Debe completar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+
+            else if (pedido.Detalle==null || pedido.Detalle.Count==0)
+            {
+                MessageBox.Show("Debe incluir al menos un prducto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+
+            else
+            {
+                pedido.FechaEntrega = dtpEntrega.Value;
+                pedido.NombreCliente = txtNombre.Text;
+                pedido.CuitCliente = txtCuit.Text;
+                pedido.CorreoCliente = txtCorreo.Text;
+
+                CrearPedido(pedido);
+            }
+            
+        }
+
+        private bool ValidarInputs()
+        {
+            return txtCorreo.Text != string.Empty && txtCuit.Text != string.Empty && txtNombre.Text != string.Empty;
+        }
+
+        private bool ValidarFecha()
+        {
+            return DateTime.Compare(dtpEntrega.Value.Date, System.DateTime.Now.Date) > 0;
         }
 
         private async void CrearPedido(Pedido pedido)
@@ -152,6 +192,11 @@ namespace Front2.Pedidos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

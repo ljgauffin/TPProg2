@@ -18,6 +18,7 @@ namespace Front2.Productos
         public FrmConsultaProductos()
         {
             InitializeComponent();
+
         }
 
         private void ConsultaProductos_Load(object sender, EventArgs e)
@@ -56,8 +57,9 @@ namespace Front2.Productos
                     dgvProductos.Rows.Add(new object[] {
                     producto.id,
                     producto.Nombre,
-                    producto.Precio,
-                    producto.Costo
+                    String.Format("{0:0.00}",producto.Precio),
+                    String.Format("{0:0.00}",producto.Costo)
+                    
                     });
                 }
             }
@@ -81,6 +83,8 @@ namespace Front2.Productos
             if (dgvProductos.CurrentCell.ColumnIndex == 4)
             {
                 int nro = int.Parse(dgvProductos.CurrentRow.Cells["id"].Value.ToString());
+                
+               
                 new frmProducto(nro, true).ShowDialog();
 
             }
@@ -88,7 +92,11 @@ namespace Front2.Productos
 
         private void FrmConsultaProductos_Load(object sender, EventArgs e)
         {
+
             CargarProductos();
+            dgvProductos.AllowUserToOrderColumns = true;
+
+            //((DataGridViewButtonColumn)dgvProductos.Columns[4]).Text. = 
         }
 
         private void btnConsultar_Click_1(object sender, EventArgs e)
@@ -102,6 +110,18 @@ namespace Front2.Productos
             CargarProductos();
         }
 
-       
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                btnConsultar.PerformClick();
+            }
+        }
     }
 }

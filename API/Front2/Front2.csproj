@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsultaHelper.cs" />
+    <Compile Include="FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipalPrueba.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
       <DependentUpon>frmReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipalPrueba.resx">
       <DependentUpon>FrmPrincipalPrueba.cs</DependentUpon>
     </EmbeddedResource>

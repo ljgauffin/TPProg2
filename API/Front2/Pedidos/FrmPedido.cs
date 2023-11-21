@@ -16,6 +16,7 @@ namespace Front2.Pedidos
     public partial class FrmPedido : Form
     {
         Pedido pedido;
+        bool noise = false;
         public FrmPedido(Pedido pedido)
         {
             this.pedido = pedido;
@@ -25,13 +26,15 @@ namespace Front2.Pedidos
 
         private void CargarEncabezado()
         {
+            noise = true;
             lblPedido.Text = pedido.Id.ToString();
-            lblEstado.Text = pedido.Estado.ToString();
+            cboEstados.SelectedItem = pedido.Estado;
             dtpEntrega.Value = pedido.FechaEntrega;
             dtpPedido.Value = pedido.FechaPedido;
             txtNombre.Text = pedido.NombreCliente;
             txtCuit.Text = pedido.CuitCliente;
             txtCorreo.Text = pedido.CorreoCliente;
+            noise = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,13 +42,45 @@ namespace Front2.Pedidos
 
         }
 
-        private void FrmPedido_Load(object sender, EventArgs e)
+        private async void FrmPedido_Load(object sender, EventArgs e)
         {
+            await CargarCombo();
             CargarEncabezado();
-            CargarDetalle();
+             await CargarDetalle();
+            lblCosto.Text = String.Format("{0:0.00}", pedido.TotalCosto());
+            lblPrecio.Text = String.Format("{0:0.00}", pedido.TotalPrecio());
+            this.Text = $"Pedido {pedido.Id}";
         }
 
-        private async void CargarDetalle()
+        private async Task CargarCombo()
+        {
+            string url = string.Format("https://localhost:7133/Estado");
+
+
+            var result = await ConsultaHelper.GetInstance().GetAsync(url);
+            var lst = JsonConvert.DeserializeObject<List<Estado>>(result);
+            cboEstados.Items.Clear();
+            if (lst != null)
+            {
+                foreach (Estado estado in lst)
+                {
+                    cboEstados.Items.Add(estado);
+                }
+                //cboEstados.DataSource = lst;
+                //cboEstados.DisplayMember = "Nombre";
+                //cboEstados.ValueMember = "Id";
+                noise = true;
+                cboEstados.SelectedIndex = 0;
+                noise = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Sin datos de estados", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private async Task CargarDetalle()
         {
             //https://localhost:7133/Detalle?id=0
 
@@ -55,6 +90,7 @@ namespace Front2.Pedidos
 
             var result = await ConsultaHelper.GetInstance().GetAsync(url);
             var lst = JsonConvert.DeserializeObject<List<DetallePedido>>(result);
+            pedido.Detalle = lst;
             dgvDetalle.Rows.Clear();
             if (lst != null)
             {
@@ -64,8 +100,8 @@ namespace Front2.Pedidos
                     detalle.Product.Nombre.ToString(),
                     detalle.Product.id,
                     detalle.Cantidad,
-                    detalle.Precio,
-                    detalle.Costo
+                    String.Format("{0:0.00}", detalle.Precio),
+                    String.Format("{0:0.00}", detalle.Costo),
                     });
                 }
             }
@@ -80,6 +116,50 @@ namespace Front2.Pedidos
 
         }
 
+        private async  void cboEstados_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+            if (noise) return;
+            
+            if (MessageBox.Show("¿Seguro que desea modificar el estado del pedido?", "Cambio de estado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ActualizarEstado();
+            }
+            else
+            {
+                noise = true;
+                cboEstados.SelectedIndex = pedido.Estado.Id;
+                noise = false;
+            }
+            
+            
+            
+        }
+
+        private async void ActualizarEstado()
+        {
+            Pedido nuevoPedido = pedido;
+            nuevoPedido.Estado = (Estado)cboEstados.SelectedItem;
+
+            string url = string.Format("https://localhost:7133/Pedido");
+            //Si se consulta por cliente, la URL incluye un parámetro adicional cliente= 
+
+            //prod.Imagen = "no seas culiao";
+
+            string data = JsonConvert.SerializeObject(nuevoPedido).ToString();
+            Response result = await ConsultaHelper.GetInstance().PutAsync(url, data);
+
+            if (result.Ok)
+            {
+                pedido.Estado = nuevoPedido.Estado;
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error, no se realizó el cambio de estado", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                noise = true;
+                cboEstados.SelectedIndex = pedido.Estado.Id; 
+                noise = false;
+            }
+        }
     }
 }

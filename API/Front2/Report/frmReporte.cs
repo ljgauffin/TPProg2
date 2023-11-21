@@ -27,8 +27,11 @@ namespace Front2.Report
 
         private void frmReporte_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.DataTable1' Puede moverla o quitarla según sea necesario.
-           
+            DateTime today = DateTime.Now;
+            dtpDesde.Value = new DateTime(today.Year, today.Month, 1).AddMonths(-1);
+            dtpHasta.Value = dtpDesde.Value.AddMonths(1).AddSeconds(-1);
+
+
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -45,6 +48,7 @@ namespace Front2.Report
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet2", tabla));
             this.reportViewer1.RefreshReport();
+            
 
 
 

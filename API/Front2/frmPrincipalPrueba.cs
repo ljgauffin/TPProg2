@@ -38,6 +38,16 @@ namespace Front2
         private void frmPrincipalPrueba_Load(object sender, EventArgs e)
         {
             IsMdiContainer = true;
+            //this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            FrmInicio form = new FrmInicio();
+
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +97,17 @@ namespace Front2
         private void pedidosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmConsultaPedidos form = new FrmConsultaPedidos();
+
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            //new FrmConsultaProductos().ShowDialog();
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInicio form = new FrmInicio();
 
             form.MdiParent = this;
             form.FormBorderStyle = FormBorderStyle.None;

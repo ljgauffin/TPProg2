@@ -66,5 +66,30 @@ namespace Api.Controllers
                 return StatusCode(500, "Error interno! Intente luego");
             }
         }
+
+
+        [HttpPut]
+        public IActionResult putEstado(Pedido pedido)
+        {
+            try
+            {
+                if (pedido == null || pedido.Id == null || pedido.Estado==null)
+                {
+                    return BadRequest("Datos de producto incorrectos!");
+                }
+                if (_pedidoDao.CambiarEstado(pedido))
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return StatusCode(500, "Error interno! Intente luego");
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno! Intente luego");
+            }
+        }
     }
 }

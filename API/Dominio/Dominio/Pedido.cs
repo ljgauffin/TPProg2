@@ -46,5 +46,25 @@ namespace Fabrica.Dominio
             if (itemToRemove != null)
                 Detalle.Remove(itemToRemove);
         }
+
+        public float TotalCosto()
+        {
+            float total = 0;
+            foreach(DetallePedido item in Detalle)
+            {
+                total += item.Costo * item.Cantidad;
+            }
+            return total;
+        }
+        public float TotalPrecio()
+        {
+            float total = 0;
+            foreach (DetallePedido item in Detalle)
+            {
+                total += item.Precio * item.Cantidad;
+            }
+            return total;
+        }
+
     }
 }
